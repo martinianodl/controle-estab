@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function () {
+    return redirect(route('login'));
+});
+
 Route::get('/estabelecimentos', 'EstabelecimentoController@index')->name('listar_estab');
 Route::get('/estabelecimentos/create', 'EstabelecimentoController@create');
 Route::post('/estabelecimentos', 'EstabelecimentoController@store');
